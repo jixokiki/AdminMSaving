@@ -1,0 +1,102 @@
+.PlanNew {
+    margin: 4rem 6rem;
+    color: black;
+  }
+  
+  .PlanNew h1 {
+    font-size: 3rem;
+  }
+  
+  .plan2-card {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .plan-newcard {
+    width: 48%;
+    text-align: start;
+    box-shadow: 0 5px 25px 2px rgba(0, 0, 0, 0.5);
+    border-radius: 7px;
+    cursor: pointer;
+    padding: 1rem .8rem;
+    margin-bottom: 20rem;
+    position: relative;
+    opacity: 0; /* Initially, set opacity to 0 */
+    transform: translateY(30px); /* Initially, translate down by 30px */
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  }
+  
+  .plan-newcard:hover {
+    transform: scale(1.03);
+  }
+  
+  .plan-newcard.visible {
+    opacity: 1; /* Make it visible when the class 'visible' is added */
+    transform: translateY(0); /* Bring it back to its original position */
+  }
+  
+  .plan-newimage {
+    height: 500px;
+    overflow: hidden;
+    border-radius: 7px;
+  }
+  
+  .plan-newimage img {
+    width: 100%;
+    height: 100%;
+    transition: 0.3s ease-in-out;
+    border-radius: 7px;
+    margin-top: 5px;
+  }
+  
+  .plan-newimage:hover img {
+    transform: scale(2.3);
+  }
+  
+  .plan-newcard h5 {
+    font-size: 1.3rem;
+    padding: .9rem 0 .2rem 0;
+  }
+  
+  .plan-newcard button {
+    position: absolute;
+    bottom: -4%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0.15rem 6rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .plan-newcard {
+    padding: .2rem 0 .1rem 0;
+    margin-top: 20px;
+    width: 100%;
+    margin: 4rem 2rem;
+  }
+  
+  @media screen and (max-width: 850px) {
+    .PlanNew {
+      margin-top: 220px;
+    }
+  
+    .plan2-card {
+      flex-direction: column;
+    }
+  
+    .plan-newcard {
+      width: calc(89% - 0.1rem);
+      margin-bottom: 0;
+    }
+  
+    .plan-newcard button {
+      display: block;
+      margin-top: 11rem;
+    }
+  }
+  
